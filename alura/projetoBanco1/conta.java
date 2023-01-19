@@ -1,8 +1,8 @@
-package alura;
+package alura.projetoBanco1;
 
 public class conta {
 //    atributos da classe conta
-    double saldo;
+    double saldo = 0;
     int agencia = 159;
     int numero;
     String titular;

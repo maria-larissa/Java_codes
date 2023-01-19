@@ -1,4 +1,4 @@
-package alura;
+package alura.projetoBanco1;
 
 import java.util.Scanner;
 
