@@ -1,8 +1,15 @@
 package alura.projetoBanco2;
 
 public class cliente {
-    String nomeCompleto;
-    String cpf;
-    String profissao;
-    contaNova conta = new contaNova();
+    public String nomeCompleto;
+    private String cpf;
+    public String profissao;
+
+
+    public void insereCpf(String cpfCliente){
+        this.cpf = cpfCliente;
+    }
+    public String consultaCpf(){
+        return this.cpf;
+    }
 }

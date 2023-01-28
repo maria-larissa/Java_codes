@@ -1,11 +1,14 @@
-package alura.projetoBanco1;
+package alura.projetoBanco3;
 
-public class conta {
+import alura.projetoBanco2.cliente;
+
+public class conta3 {
 //    atributos da classe conta
-    double saldo = 0;
-    int agencia = 159;
-    int numero;
-    String titular;
+    private double saldo = 0;
+    private int agencia = 159;
+    private int numero;
+    private cliente3 titular;
+
 
     public boolean depositar(double valor){
         if(valor >= 0){
@@ -16,7 +19,6 @@ public class conta {
             return false;
         }
     }
-
     public boolean sacar(double valor){
         if(0 < valor && valor <= this.saldo){
             this.saldo -= valor;
@@ -27,8 +29,7 @@ public class conta {
             return false;
         }
     }
-
-    public boolean tranferir(double valor, conta contaDestino){
+    public boolean tranferir(double valor, conta3 contaDestino){
         if(0 < valor && valor <= this.saldo){
             contaDestino.saldo += valor;
             this.saldo -= valor;
@@ -38,5 +39,34 @@ public class conta {
         }
     }
 
+    public double consultarSaldo(){
+        return this.saldo;
+    }
 
+
+
+    public void insereNumero(int numero){
+        this.numero = numero;
+    }
+    public int consultarNumero(){
+        return this.numero;
+    }
+
+
+
+    public void insereAgencia(int agencia){
+        this.agencia = agencia;
+    }
+    public int consultarAgencia(){
+        return this.agencia;
+    }
+
+
+
+    public void insereTitular(cliente3 titular){
+        this.titular = titular;
+    }
+    public cliente3 consultarTitular(){
+        return this.titular;
+    }
 }

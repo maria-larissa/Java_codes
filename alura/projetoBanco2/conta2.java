@@ -1,15 +1,20 @@
 package alura.projetoBanco2;
 
-public class contaNova {
+public class conta2 {
 //    atributos da classe conta
-    double saldo = 0;
-    int agencia = 159;
-    int numero;
-    cliente titular;
+    private double saldo = 0;
+    public int agencia = 159;
+    public int numero;
+    public cliente titular;
 
-    public void depositar(double valor){
-        this.saldo += valor;
-        System.out.println("\n\nFoi depositado "+ saldo +" na sua conta.");
+    public boolean depositar(double valor){
+        if(valor >= 0){
+            this.saldo += valor;
+            System.out.println("\n\nFoi depositado "+ saldo +" na sua conta.");
+            return true;
+        }else {
+            return false;
+        }
     }
 
     public boolean sacar(double valor){
@@ -23,7 +28,7 @@ public class contaNova {
         }
     }
 
-    public boolean tranferir(double valor, contaNova contaDestino){
+    public boolean tranferir(double valor, conta2 contaDestino){
         if(0 < valor && valor <= this.saldo){
             contaDestino.saldo += valor;
             this.saldo -= valor;
@@ -33,5 +38,8 @@ public class contaNova {
         }
     }
 
+    public double consultarSaldo(){
+        return this.saldo;
+    }
 
 }
