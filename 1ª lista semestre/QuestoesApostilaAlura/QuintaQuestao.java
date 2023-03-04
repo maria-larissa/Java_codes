@@ -21,6 +21,8 @@ public class QuintaQuestao {
         }
         return fat;
     }
+
+
     public static void main(String[] args) {
 
         int num1 = 20;
